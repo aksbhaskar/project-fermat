@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 · Project Fermat</title>
+  <meta name="description" content="This page could not be found." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --ink: #f4f1ea;
+      --muted: #8a8778;
+      --accent: #e8c547;
+      --line: rgba(244, 241, 234, 0.12);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Fraunces', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 20px;
+    }
+    main {
+      max-width: 34rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .code {
+      font-weight: 400;
+      font-size: clamp(4rem, 16vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+    }
+    .code .q {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .eq {
+      font-style: italic;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2.6vw, 1.15rem);
+    }
+    p {
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+      line-height: 1.6;
+    }
+    .home {
+      margin-top: 10px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: clamp(0.9rem, 2.2vw, 1rem);
+      border-bottom: 1px solid rgba(244, 241, 234, 0.25);
+      transition: border-color 0.2s ease;
+    }
+    .home:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 class="code">4<span class="q">0</span>4</h1>
+    <p class="eq">This one doesn't have a proof.</p>
+    <p>The page you're looking for isn't in the margins. It may have moved, or never existed.</p>
+    <a class="home" href="/">Back to Project Fermat</a>
+  </main>
+</body>
+</html>
