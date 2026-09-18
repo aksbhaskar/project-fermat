@@ -6,34 +6,40 @@ toward IOQM and RMO.
 
 ## Stack
 
-Static HTML/CSS — no build step, no framework, no dependencies.
+Static HTML/CSS — no build step, no framework, no dependencies, no JavaScript.
 
 | File | |
 |---|---|
-| `index.html` | Home — hero, what we do, volunteer roles and contact |
+| `index.html` | Home |
 | `mission.html` | Mission |
 | `founders.html` | Founders |
+| `privacy.html` · `terms.html` | Legal |
 | `404.html` | Not found |
 | `styles.css` | All styles, shared by every page |
-| `site.js` | Stamps the year in the footer. That is all. |
 
-Set entirely in **Fraunces**, loaded from Google Fonts. Its optical-size axis does the
-work a second typeface would normally do: high contrast at display sizes, sturdier at
-body sizes. Labels are the same face, letterspaced and uppercased.
+## The look
 
-The ruled-grid backdrop and the faint equations in the margins are pure CSS — a fixed
-layer of two `linear-gradient` repeats under a radial mask, plus four absolutely
-positioned spans.
+Everything is set in **Fraunces at weight 400** — one family, one weight. The
+optical-size axis handles the difference between a heading and a paragraph, so
+nothing needs to get bolder to read as a heading.
+
+Every page is centred on a single 40rem measure and built from three devices:
+
+- a small letterspaced accent line above the title
+- muted body copy at a comfortable line-height
+- hairline rules to separate blocks
+
+No boxes, no cards, no panels, no fills, no italics, no animation. The accent gold
+appears only on the line above the title, on the co-founder labels, and on hover.
+
+Legal pages are the one exception to centring: their body copy is left-aligned,
+because centred text is hard to read at that length.
 
 ## Editing
 
-There is no template engine, so the top bar and footer are repeated in each page.
-If you change one, change it in all four. The active tab is marked with
-`aria-current="page"`, which is what draws the underline.
-
-There are no scroll animations and no entrance effects. Content is in the page
-markup and renders immediately, with or without JavaScript. The only motion is
-on hover, on links and buttons.
+There is no template engine, so the nav and footer are repeated in each page. If
+you change one, change it in all six. The current page is marked with
+`aria-current="page"`, which is what underlines it.
 
 ## Local preview
 
