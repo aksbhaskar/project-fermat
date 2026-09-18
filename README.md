@@ -8,25 +8,33 @@ toward IOQM and RMO.
 
 Static HTML/CSS — no build step, no framework, no dependencies.
 
-- `index.html` — the site (styles in one `<style>` block, ~25 lines of vanilla JS)
-- `404.html` — not-found page
+| File | |
+|---|---|
+| `index.html` | Home — hero, what we do, volunteer roles and contact |
+| `mission.html` | Mission |
+| `founders.html` | Founders |
+| `404.html` | Not found |
+| `styles.css` | All styles, shared by every page |
+| `site.js` | Progressive enhancement only — scroll reveal and the footer year |
 
 Set entirely in **Fraunces**, loaded from Google Fonts. Its optical-size axis does the
 work a second typeface would normally do: high contrast at display sizes, sturdier at
 body sizes. Labels are the same face, letterspaced and uppercased.
 
-The ruled-grid backdrop and the faint equations in the margins are pure CSS —
-a fixed layer of two `linear-gradient` repeats under a radial mask, plus four
-absolutely positioned spans.
+The ruled-grid backdrop and the faint equations in the margins are pure CSS — a fixed
+layer of two `linear-gradient` repeats under a radial mask, plus four absolutely
+positioned spans.
 
-## Structure
+## Editing
 
-`01 Mission` · `02 What we do` · `03 Founders` · `04 Volunteer`, with a sticky
-masthead and anchor navigation.
+There is no template engine, so the top bar and footer are repeated in each page.
+If you change one, change it in all four. The active tab is marked with
+`aria-current="page"`, which is what draws the underline.
+
+Every page renders fully without JavaScript; `site.js` only adds the reveal
+animation, and only when the viewer has not asked for reduced motion.
 
 ## Local preview
-
-Open `index.html` in a browser, or serve the folder:
 
 ```bash
 npx serve .
