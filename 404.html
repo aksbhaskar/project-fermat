@@ -7,7 +7,7 @@
   <meta name="description" content="This page could not be found." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0a0a0f;
@@ -15,6 +15,7 @@
       --muted: #8a8778;
       --accent: #e8c547;
       --line: rgba(244, 241, 234, 0.12);
+      --line-soft: rgba(244, 241, 234, 0.055);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { min-height: 100%; }
@@ -30,7 +31,34 @@
       text-align: center;
       padding: 48px 20px;
     }
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--line-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 45%, #000 35%, transparent 100%);
+              mask-image: radial-gradient(ellipse 90% 70% at 50% 45%, #000 35%, transparent 100%);
+    }
+    .marginalia {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      user-select: none;
+      font-style: italic;
+      white-space: nowrap;
+    }
+    .marginalia span { position: absolute; opacity: 0.06; }
+    .m1 { top: 14%; left: -1.5%; font-size: clamp(1.5rem, 5vw, 3.5rem); transform: rotate(-6deg); }
+    .m2 { bottom: 14%; right: -2.5%; font-size: clamp(1.3rem, 4vw, 3rem); transform: rotate(5deg); }
+
     main {
+      position: relative;
+      z-index: 1;
       max-width: 34rem;
       display: flex;
       flex-direction: column;
@@ -69,6 +97,12 @@
   </style>
 </head>
 <body>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div class="marginalia" aria-hidden="true">
+    <span class="m1">x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup></span>
+    <span class="m2">a² + b² = c²</span>
+  </div>
+
   <main>
     <h1 class="code">4<span class="q">0</span>4</h1>
     <p class="eq">This one doesn't have a proof.</p>

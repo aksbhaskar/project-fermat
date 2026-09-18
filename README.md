@@ -1,14 +1,28 @@
 # Project Fermat
 
-Landing site for **Project Fermat** — a student-led initiative making mathematics
-more accessible, engaging and rigorous for students from underserved communities.
+Site for **Project Fermat** — a volunteer initiative helping middle school students
+(Classes 6–8) build a foundation in olympiad mathematics, from SOF IMO and NMTC
+toward IOQM and RMO.
 
 ## Stack
 
-Static HTML/CSS — no build step, no framework. Everything lives in `index.html`
-(styles inline in a single `<style>` block, ~30 lines of vanilla JS at the bottom).
+Static HTML/CSS — no build step, no framework, no dependencies.
 
-Type: Fraunces (display) · Space Grotesk (text) · IBM Plex Mono (labels), via Google Fonts.
+- `index.html` — the site (styles in one `<style>` block, ~25 lines of vanilla JS)
+- `404.html` — not-found page
+
+Set entirely in **Fraunces**, loaded from Google Fonts. Its optical-size axis does the
+work a second typeface would normally do: high contrast at display sizes, sturdier at
+body sizes. Labels are the same face, letterspaced and uppercased.
+
+The ruled-grid backdrop and the faint equations in the margins are pure CSS —
+a fixed layer of two `linear-gradient` repeats under a radial mask, plus four
+absolutely positioned spans.
+
+## Structure
+
+`01 Mission` · `02 What we do` · `03 Founders` · `04 Volunteer`, with a sticky
+masthead and anchor navigation.
 
 ## Local preview
 
@@ -17,13 +31,6 @@ Open `index.html` in a browser, or serve the folder:
 ```bash
 npx serve .
 ```
-
-## Before this goes live
-
-Two placeholders need real values — both marked with `TODO` comments in `index.html`:
-
-- `[data-apply]` — the volunteer application form URL (currently `#`)
-- `[data-contact]` — the contact address (currently `hello@projectfermat.org`)
 
 ## Deploy
 
