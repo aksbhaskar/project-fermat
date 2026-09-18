@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 · Project Fermat</title>
-  <meta name="description" content="This page could not be found." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --ink: #f4f1ea;
-      --muted: #8a8778;
-      --accent: #e8c547;
-      --line: rgba(244, 241, 234, 0.12);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { min-height: 100%; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Fraunces', Georgia, serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 48px 20px;
-    }
-    main {
-      max-width: 34rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-    }
-    .code {
-      font-weight: 400;
-      font-size: clamp(4rem, 16vw, 8rem);
-      line-height: 0.9;
-      letter-spacing: -0.02em;
-    }
-    .code .q {
-      font-style: italic;
-      color: var(--accent);
-    }
-    .eq {
-      font-style: italic;
-      color: var(--muted);
-      font-size: clamp(0.95rem, 2.6vw, 1.15rem);
-    }
-    p {
-      color: var(--muted);
-      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
-      line-height: 1.6;
-    }
-    .home {
-      margin-top: 10px;
-      color: var(--ink);
-      text-decoration: none;
-      font-size: clamp(0.9rem, 2.2vw, 1rem);
-      border-bottom: 1px solid rgba(244, 241, 234, 0.25);
-      transition: border-color 0.2s ease;
-    }
-    .home:hover { border-color: var(--accent); }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>404 · Project Fermat</title>
+<meta name="description" content="This page could not be found." />
+<meta name="theme-color" content="#0a0a0f" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .notfound { display: flex; align-items: center; justify-content: center; text-align: center; padding-block: clamp(72px, 16vh, 150px); }
+  .notfound .inner { max-width: 36rem; }
+  .code { font-size: clamp(4.5rem, 17vw, 9rem); line-height: 0.9; letter-spacing: -0.03em; font-weight: 600; }
+  .code .q { font-style: italic; font-weight: 400; color: var(--accent); }
+  .eq { font-style: italic; color: var(--muted); font-size: clamp(1rem, 2.6vw, 1.25rem); margin-top: 18px; }
+  .notfound p.body { color: var(--muted); margin-top: 14px; }
+  .notfound .btn { margin-top: 34px; }
+</style>
 </head>
 <body>
-  <main>
-    <h1 class="code">4<span class="q">0</span>4</h1>
-    <p class="eq">This one doesn't have a proof.</p>
-    <p>The page you're looking for isn't in the margins. It may have moved, or never existed.</p>
-    <a class="home" href="/">Back to Project Fermat</a>
-  </main>
+
+<div class="backdrop" aria-hidden="true"></div>
+<div class="marginalia" aria-hidden="true">
+  <span class="m1">x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup></span>
+  <span class="m2">a&sup2; + b&sup2; = c&sup2;</span>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="/">Project <em>Fermat</em></a>
+    <nav class="tabs" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/mission">Mission</a>
+      <a href="/founders">Founders</a>
+      <a href="/#volunteer" class="cta">Volunteer</a>
+    </nav>
+  </div>
+</header>
+
+<main class="notfound">
+  <div class="wrap">
+    <div class="inner">
+      <h1 class="code">4<span class="q">0</span>4</h1>
+      <p class="eq">This one doesn&rsquo;t have a proof.</p>
+      <p class="body">The page you&rsquo;re looking for isn&rsquo;t in the margins. It may have moved, or never existed.</p>
+      <a class="btn btn-ghost" href="/">Back to Project Fermat <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="colophon" style="margin-top:0;border-top:0;padding-top:0">
+      <span>&copy; <span id="year">2026</span> Project Fermat</span>
+      <span><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+
 </body>
 </html>

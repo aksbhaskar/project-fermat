@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mission — Project Fermat</title>
+<meta name="description" content="Access to meaningful mathematical education should not depend on where a student is born, or what their family can afford." />
+<meta property="og:title" content="Project Fermat" />
+<meta property="og:description" content="Mathematics should not be a lottery." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0a0a0f" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  // Set before first paint: .rise blocks only start hidden when JS can reveal them.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+      'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+  }
+</script>
+</head>
+<body>
+
+<div class="backdrop" aria-hidden="true"></div>
+<div class="marginalia" aria-hidden="true">
+  <span class="m1">x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup></span>
+  <span class="m2">a&sup2; + b&sup2; = c&sup2;</span>
+  <span class="m3">e<sup>i&pi;</sup> + 1 = 0</span>
+  <span class="m4">&forall;&epsilon; &gt; 0, &exist;&delta; &gt; 0</span>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="/">Project <em>Fermat</em></a>
+    <nav class="tabs" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/mission" aria-current="page">Mission</a>
+      <a href="/founders">Founders</a>
+      <a href="/#volunteer" class="cta">Volunteer</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="label">Mission</p>
+      <h1>Mathematics should not be a <em>lottery</em>.</h1>
+      <p class="standfirst">Access to meaningful mathematical education should not depend on where a student is born, or what their family can afford.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="label">What we believe</h2>
+      </div>
+      <div class="split">
+        <p class="statement rise">
+          We want mathematics to be more <em>accessible, engaging and rigorous</em> for students from underserved communities.
+        </p>
+        <div class="prose rise">
+          <p>Our mission is to connect those students with passionate university students, educators and mentors &mdash; people who love the subject and want to pass that on.</p>
+          <p>Through classroom teaching, olympiad-oriented problem solving, personalised learning and open educational resources, we aim to help students <strong>build mathematical confidence</strong>, <strong>develop independent reasoning</strong>, and discover the joy of mathematics.</p>
+          <p>We are building a community where students can explore mathematics beyond the textbook, and where those who love the subject can help others discover it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="label">Where we start</h2>
+      </div>
+      <div class="split">
+        <p class="statement rise">
+          We begin with <em>Classes 6 to 8</em> &mdash; early enough that a student&rsquo;s sense of the subject is still being formed.
+        </p>
+        <div class="prose rise">
+          <p>Olympiad mathematics is usually framed as something for students who are already ahead. We think it works better as an invitation: a way of showing that mathematics is not a list of procedures to memorise but something you can think your way through.</p>
+          <p>We work along the route students actually travel &mdash; <strong>SOF IMO and NMTC</strong> in the early years, building toward <strong>IOQM and RMO</strong> &mdash; without treating the exams as the point.</p>
+          <p>The aim is not that every student wins something. It is that they stop believing mathematics is a thing other people are good at.</p>
+        </div>
+      </div>
+
+      <div class="next-up">
+        <p class="label">Next</p>
+        <a href="/founders">Founders <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-mark">Project <em>Fermat</em></p>
+        <p class="footer-note">A volunteer initiative building a foundation in olympiad mathematics for middle school students.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/mission">Mission</a>
+        <a href="/founders">Founders</a>
+        <a href="/#volunteer">Volunteer</a>
+      </nav>
+    </div>
+    <p class="legal">
+      <a href="/privacy">Privacy Policy</a>
+      <span class="sep">&middot;</span>
+      <a href="/terms">Terms &amp; Conditions</a>
+    </p>
+    <div class="colophon">
+      <span>&copy; <span id="year">2026</span> Project Fermat &mdash; an initiative by Akshat Bhaskar and Ishaan Harish</span>
+      <em>&ldquo;I have discovered a truly marvellous proof of this&hellip;&rdquo;</em>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+
+</body>
+</html>
