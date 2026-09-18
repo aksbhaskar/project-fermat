@@ -30,7 +30,7 @@ Every page is centred on a single 40rem measure and built from three devices:
 - hairline rules to separate blocks
 
 No boxes, no cards, no panels, no fills, no italics, no animation. The accent gold
-appears only on the line above the title, on the co-founder labels, and on hover.
+appears only on the line above the title, on the founder labels, and on hover.
 
 Legal pages are the one exception to centring: their body copy is left-aligned,
 because centred text is hard to read at that length.
