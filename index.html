@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project Fermat</title>
-  <meta name="description" content="Project Fermat — coming soon." />
+  <meta name="description" content="Project Fermat — an initiative helping middle school students build a foundation in olympiad mathematics." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
@@ -14,9 +14,10 @@
       --ink: #f4f1ea;
       --muted: #8a8778;
       --accent: #e8c547;
+      --line: rgba(244, 241, 234, 0.12);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
+    html, body { min-height: 100%; }
     body {
       background: var(--bg);
       color: var(--ink);
@@ -27,42 +28,102 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 24px 16px;
-      gap: 18px;
+      padding: 48px 20px;
+    }
+    main {
+      max-width: 40rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .badge {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--accent);
     }
     h1 {
       font-weight: 400;
       font-size: clamp(2rem, 6vw, 3.5rem);
       letter-spacing: -0.01em;
     }
-    .soon {
+    .about {
       color: var(--muted);
-      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-      letter-spacing: 0.02em;
+      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+      line-height: 1.65;
     }
-    .initiative {
-      margin-top: 6px;
+    .cta {
+      margin-top: 8px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cta-title {
+      font-size: clamp(1.05rem, 3vw, 1.35rem);
+    }
+    .cta-note {
       color: var(--muted);
-      font-size: clamp(0.82rem, 2vw, 0.95rem);
+      font-size: clamp(0.85rem, 2.2vw, 0.98rem);
       line-height: 1.6;
     }
-    .initiative a {
+    a {
       color: var(--ink);
       text-decoration: none;
       border-bottom: 1px solid rgba(244, 241, 234, 0.25);
       transition: border-color 0.2s ease;
     }
-    .initiative a:hover { border-color: var(--accent); }
+    a:hover { border-color: var(--accent); }
+    .emails {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 18px;
+      font-size: clamp(0.85rem, 2.2vw, 0.98rem);
+      color: var(--muted);
+    }
+    .initiative {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
-  <h1>Project Fermat</h1>
-  <p class="soon">Coming soon</p>
-  <p class="initiative">
-    An initiative by
-    <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
-    and
-    <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
-  </p>
+  <main>
+    <span class="badge">Coming soon</span>
+    <h1>Project Fermat</h1>
+    <p class="about">
+      A small volunteer initiative helping middle school students (Classes 6–8)
+      build a foundation in olympiad mathematics — from SOF IMO and NMTC toward
+      IOQM and RMO. Less about solving a particular problem, more about learning
+      how to look at one.
+    </p>
+
+    <div class="cta">
+      <p class="cta-title">Volunteer as a tutor</p>
+      <p class="cta-note">
+        We're looking for Class 11–12 students and mathematics undergraduates who
+        love thinking about problems — and about how to explain them. No formal
+        teaching experience needed. Reach out with a short introduction and your
+        mathematical background:
+      </p>
+      <p class="emails">
+        <a href="mailto:akshat@thedecodedpodcast.com">akshat@thedecodedpodcast.com</a>
+        <a href="mailto:ishaanharish3@gmail.com">ishaanharish3@gmail.com</a>
+      </p>
+    </div>
+
+    <p class="initiative">
+      An initiative by
+      <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
+      and
+      <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
+    </p>
+  </main>
 </body>
 </html>
