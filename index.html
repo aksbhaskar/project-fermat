@@ -91,6 +91,17 @@
       font-size: clamp(0.8rem, 2vw, 0.9rem);
       line-height: 1.6;
     }
+    .legal {
+      margin-top: 4px;
+      font-size: clamp(0.72rem, 1.8vw, 0.8rem);
+      letter-spacing: 0.03em;
+    }
+    .legal a {
+      color: var(--muted);
+      border-bottom: none;
+    }
+    .legal a:hover { color: var(--accent); }
+    .legal .sep { color: var(--muted); opacity: 0.5; margin: 0 8px; }
   </style>
 </head>
 <body>
@@ -123,6 +134,11 @@
       <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
       and
       <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
+    </p>
+    <p class="legal">
+      <a href="/privacy.html">Privacy Policy</a>
+      <span class="sep">·</span>
+      <a href="/terms.html">Terms &amp; Conditions</a>
     </p>
   </main>
 </body>
