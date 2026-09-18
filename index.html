@@ -1,145 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Project Fermat</title>
-  <meta name="description" content="Project Fermat — an initiative helping middle school students build a foundation in olympiad mathematics." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0a0a0f;
-      --ink: #f4f1ea;
-      --muted: #8a8778;
-      --accent: #e8c547;
-      --line: rgba(244, 241, 234, 0.12);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { min-height: 100%; }
-    body {
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Fraunces', Georgia, serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 48px 20px;
-    }
-    main {
-      max-width: 40rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .badge {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    h1 {
-      font-weight: 400;
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      letter-spacing: -0.01em;
-    }
-    .about {
-      color: var(--muted);
-      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
-      line-height: 1.65;
-    }
-    .cta {
-      margin-top: 8px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line);
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .cta-title {
-      font-size: clamp(1.05rem, 3vw, 1.35rem);
-    }
-    .cta-note {
-      color: var(--muted);
-      font-size: clamp(0.85rem, 2.2vw, 0.98rem);
-      line-height: 1.6;
-    }
-    a {
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(244, 241, 234, 0.25);
-      transition: border-color 0.2s ease;
-    }
-    a:hover { border-color: var(--accent); }
-    .emails {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 6px 18px;
-      font-size: clamp(0.85rem, 2.2vw, 0.98rem);
-      color: var(--muted);
-    }
-    .initiative {
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: clamp(0.8rem, 2vw, 0.9rem);
-      line-height: 1.6;
-    }
-    .legal {
-      margin-top: 4px;
-      font-size: clamp(0.72rem, 1.8vw, 0.8rem);
-      letter-spacing: 0.03em;
-    }
-    .legal a {
-      color: var(--muted);
-      border-bottom: none;
-    }
-    .legal a:hover { color: var(--accent); }
-    .legal .sep { color: var(--muted); opacity: 0.5; margin: 0 8px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Project Fermat — Olympiad mathematics for middle school students</title>
+<meta name="description" content="A volunteer initiative helping middle school students build a foundation in olympiad mathematics — from SOF IMO and NMTC toward IOQM and RMO." />
+<meta property="og:title" content="Project Fermat" />
+<meta property="og:description" content="Less about solving a particular problem, more about learning how to look at one." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0a0a0f" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script>
+  // Set before first paint: .rise blocks only start hidden when JS can reveal them.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+      'IntersectionObserver' in window) {
+    document.documentElement.classList.add('js');
+  }
+</script>
 </head>
 <body>
-  <main>
-    <span class="badge">Coming soon</span>
-    <h1>Project Fermat</h1>
-    <p class="about">
-      A small volunteer initiative helping middle school students (Classes 6–8)
-      build a foundation in olympiad mathematics — from SOF IMO and NMTC toward
-      IOQM and RMO. Less about solving a particular problem, more about learning
-      how to look at one.
-    </p>
 
-    <div class="cta">
-      <p class="cta-title">Volunteer as a tutor</p>
-      <p class="cta-note">
-        We're looking for Class 11–12 students and mathematics undergraduates who
-        love thinking about problems — and about how to explain them. No formal
-        teaching experience needed. Reach out with a short introduction and your
-        mathematical background:
+<div class="backdrop" aria-hidden="true"></div>
+<div class="marginalia" aria-hidden="true">
+  <span class="m1">x<sup>n</sup> + y<sup>n</sup> = z<sup>n</sup></span>
+  <span class="m2">a&sup2; + b&sup2; = c&sup2;</span>
+  <span class="m3">e<sup>i&pi;</sup> + 1 = 0</span>
+  <span class="m4">&forall;&epsilon; &gt; 0, &exist;&delta; &gt; 0</span>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="/">Project <em>Fermat</em></a>
+    <nav class="tabs" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/mission">Mission</a>
+      <a href="/founders">Founders</a>
+      <a href="/#volunteer" class="cta">Volunteer</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">A student-led mathematics initiative</p>
+      <h1>Mathematics beyond the <em>textbook</em>.</h1>
+      <p class="lede">
+        A volunteer initiative helping <strong>middle school students (Classes 6&ndash;8)</strong>
+        build a foundation in olympiad mathematics &mdash; from SOF IMO and NMTC toward IOQM and RMO.
       </p>
-      <p class="emails">
-        <a href="mailto:akshat@thedecodedpodcast.com">akshat@thedecodedpodcast.com</a>
-        <a href="mailto:ishaanharish3@gmail.com">ishaanharish3@gmail.com</a>
-      </p>
+      <p class="pull">Less about solving a particular problem, more about learning how to look at one.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#volunteer">Volunteer as a tutor <span class="arrow">&rarr;</span></a>
+        <a class="btn btn-ghost" href="/mission">Read our mission <span class="arrow">&rarr;</span></a>
+      </div>
     </div>
+  </section>
 
-    <p class="initiative">
-      An initiative by
-      <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
-      and
-      <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
-    </p>
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="label">What we do</h2>
+      </div>
+      <div class="programmes rise">
+        <article class="programme">
+          <p class="idx">01</p>
+          <h3>Foundations first</h3>
+          <p>Olympiad work rewards students who are secure in the basics. We start there &mdash; closing the gaps that make everything afterwards feel impossible.</p>
+        </article>
+        <article class="programme">
+          <p class="idx">02</p>
+          <h3>Problem solving</h3>
+          <p>Structured sessions built around the habit of sitting with a hard problem: reading it properly, trying something, and being wrong without giving up.</p>
+        </article>
+        <article class="programme">
+          <p class="idx">03</p>
+          <h3>A pathway, not a cram</h3>
+          <p>We work along the route students actually travel &mdash; SOF IMO and NMTC in the early years, building toward IOQM and RMO.</p>
+        </article>
+        <article class="programme">
+          <p class="idx">04</p>
+          <h3>Open resources</h3>
+          <p>Notes, problem sets and worked explanations released freely, so the work outlasts any single session and reaches students we cannot teach in person.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="label">Volunteer</h2>
+      </div>
+      <div class="split">
+        <p class="statement rise">
+          If you love thinking about problems &mdash; and about
+          <em>how to explain them</em> &mdash; you already have what we are looking for.
+        </p>
+        <div class="prose rise">
+          <p>We&rsquo;re looking for <strong>Class 11&ndash;12 students and mathematics undergraduates</strong> who want to teach. No formal teaching experience needed.</p>
+          <p>What matters is patience, a real grasp of the material, and the willingness to show up consistently. Volunteers are supported with material, structure, and a community of people doing the same work.</p>
+        </div>
+      </div>
+
+      <div class="roles rise">
+        <div class="role-row">
+          <span class="num">R1</span>
+          <h3>Tutor</h3>
+          <p>Teach scheduled sessions to small groups of Class 6&ndash;8 students.</p>
+        </div>
+        <div class="role-row">
+          <span class="num">R2</span>
+          <h3>Problem-set author</h3>
+          <p>Write and curate problems, worked solutions and notes for our open resources.</p>
+        </div>
+        <div class="role-row">
+          <span class="num">R3</span>
+          <h3>Mentor</h3>
+          <p>Work one-to-one with students preparing for IOQM and RMO.</p>
+        </div>
+        <div class="role-row">
+          <span class="num">R4</span>
+          <h3>Operations &amp; outreach</h3>
+          <p>Coordinate volunteers, build school partnerships, and keep the programmes running.</p>
+        </div>
+      </div>
+
+      <div class="apply rise">
+        <h3>Applications are open</h3>
+        <p>Reach out with a short introduction and your mathematical background. Tell us what you would like to teach and how much time you can give &mdash; we read every email.</p>
+        <div class="emails">
+          <a class="email" href="mailto:akshat@thedecodedpodcast.com">akshat@thedecodedpodcast.com <span aria-hidden="true">&rarr;</span></a>
+          <a class="email" href="mailto:ishaanharish3@gmail.com">ishaanharish3@gmail.com <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-mark">Project <em>Fermat</em></p>
+        <p class="footer-note">A volunteer initiative building a foundation in olympiad mathematics for middle school students.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="/mission">Mission</a>
+        <a href="/founders">Founders</a>
+        <a href="/#volunteer">Volunteer</a>
+      </nav>
+    </div>
     <p class="legal">
       <a href="/privacy">Privacy Policy</a>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <a href="/terms">Terms &amp; Conditions</a>
     </p>
-  </main>
+    <div class="colophon">
+      <span>&copy; <span id="year">2026</span> Project Fermat &mdash; an initiative by Akshat Bhaskar and Ishaan Harish</span>
+      <em>&ldquo;I have discovered a truly marvellous proof of this&hellip;&rdquo;</em>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+
 </body>
 </html>
