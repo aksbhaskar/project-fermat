@@ -7,154 +7,62 @@
   <meta name="description" content="Project Fermat — coming soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #0a0a0f;
       --ink: #f4f1ea;
       --muted: #8a8778;
       --accent: #e8c547;
-      --line: rgba(244, 241, 234, 0.08);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: 'Fraunces', Georgia, serif;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-      position: relative;
-    }
-    /* faint mathematical grid + margin scribble backdrop */
-    .backdrop {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(var(--line) 1px, transparent 1px),
-        linear-gradient(90deg, var(--line) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse 80% 70% at 50% 45%, #000 40%, transparent 100%);
-    }
-    .equation {
-      position: fixed;
-      z-index: 0;
-      color: var(--muted);
-      opacity: 0.10;
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      white-space: nowrap;
-      pointer-events: none;
-      user-select: none;
-    }
-    .eq1 { top: 14%; left: -2%; font-size: clamp(1.5rem, 5vw, 3.5rem); transform: rotate(-6deg); }
-    .eq2 { bottom: 16%; right: -3%; font-size: clamp(1.3rem, 4vw, 3rem); transform: rotate(5deg); }
-
-    main {
-      position: relative;
-      z-index: 1;
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 96px 16px 32px;
-      gap: 28px;
-    }
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.78rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 500;
-    }
-    .dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 0 0 rgba(232, 197, 71, 0.6);
-      animation: pulse 2.4s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(232, 197, 71, 0.5); }
-      70% { box-shadow: 0 0 0 12px rgba(232, 197, 71, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(232, 197, 71, 0); }
+      padding: 24px 16px;
+      gap: 18px;
     }
     h1 {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(3rem, 12vw, 8.5rem);
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      max-width: 14ch;
-    }
-    h1 .fermat {
-      font-style: italic;
-      color: var(--accent);
-    }
-    .tagline {
-      font-size: clamp(1.05rem, 2.4vw, 1.4rem);
-      color: var(--muted);
-      max-width: 44ch;
-      line-height: 1.5;
+      font-weight: 400;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      letter-spacing: -0.01em;
     }
     .soon {
-      margin-top: 4px;
-      display: inline-block;
-      font-family: 'Fraunces', serif;
-      font-size: clamp(1.1rem, 3vw, 1.6rem);
-      color: var(--ink);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 12px 28px;
-      background: rgba(244, 241, 234, 0.02);
-      backdrop-filter: blur(4px);
-    }
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 24px 16px 36px;
       color: var(--muted);
-      font-size: 0.82rem;
-      letter-spacing: 0.04em;
+      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+      letter-spacing: 0.02em;
     }
-    /* reveal animation */
-    .reveal { opacity: 0; transform: translateY(16px); animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
-    .reveal.d1 { animation-delay: 0.05s; }
-    .reveal.d2 { animation-delay: 0.18s; }
-    .reveal.d3 { animation-delay: 0.32s; }
-    .reveal.d4 { animation-delay: 0.46s; }
-    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal { animation: none; opacity: 1; transform: none; }
-      .dot { animation: none; }
+    .initiative {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: clamp(0.82rem, 2vw, 0.95rem);
+      line-height: 1.6;
     }
+    .initiative a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(244, 241, 234, 0.25);
+      transition: border-color 0.2s ease;
+    }
+    .initiative a:hover { border-color: var(--accent); }
   </style>
 </head>
 <body>
-  <div class="backdrop"></div>
-  <div class="equation eq1" aria-hidden="true">xⁿ + yⁿ = zⁿ</div>
-  <div class="equation eq2" aria-hidden="true">∮ &nbsp; a² + b² = c²</div>
-
-  <main>
-    <span class="kicker reveal d1"><span class="dot"></span>In development</span>
-    <h1 class="reveal d2">Project <span class="fermat">Fermat</span></h1>
-    <p class="tagline reveal d3">Something is being worked out in the margins. We'll have more to show here soon.</p>
-    <span class="soon reveal d4">Coming soon</span>
-  </main>
-
-  <footer class="reveal d4">© <span id="year"></span> Project Fermat</footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <h1>Project Fermat</h1>
+  <p class="soon">Coming soon</p>
+  <p class="initiative">
+    An initiative by
+    <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
+    and
+    <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
+  </p>
 </body>
 </html>
