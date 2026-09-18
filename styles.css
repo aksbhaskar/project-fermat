@@ -305,24 +305,7 @@ p { margin: 0; }
 
 /* --- volunteer -------------------------------------------------- */
 
-.roles { margin-top: 42px; border-top: 1px solid var(--line-soft); }
-.role-row {
-  display: grid;
-  grid-template-columns: 54px minmax(0, 1fr) minmax(0, 1.3fr);
-  gap: 22px;
-  align-items: baseline;
-  padding-block: 25px;
-  border-bottom: 1px solid var(--line-soft);
-}
-@media (max-width: 740px) { .role-row { grid-template-columns: 1fr; gap: 7px; padding-block: 21px; } }
-.role-row .num { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.16em; color: var(--muted-dim); }
-.role-row h3 { font-size: 1.05rem; font-weight: 500; letter-spacing: 0; }
-.role-row p { color: var(--muted); font-size: 0.95rem; }
-
-.apply { margin-top: 44px; padding: clamp(26px, 4vw, 36px); border: 1px solid var(--line); }
-.apply h3 { font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 400; letter-spacing: -0.008em; }
-.apply p { color: var(--muted); max-width: 58ch; margin-top: 12px; font-size: 0.99rem; }
-.emails { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.emails { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .email {
   display: inline-flex;
   align-items: center;
@@ -389,11 +372,6 @@ p { margin: 0; }
 /* --- focus + motion --------------------------------------------- */
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-
-/* Only hide content if JS is running to bring it back. */
-.js .rise { opacity: 0; transform: translateY(13px); transition: opacity .6s ease, transform .6s cubic-bezier(.22,1,.36,1); }
-.js .rise.in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .js .rise { opacity: 1; transform: none; transition: none; } }
 
 /* --- legal links in the footer ---------------------------------- */
 

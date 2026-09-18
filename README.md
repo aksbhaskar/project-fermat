@@ -15,7 +15,7 @@ Static HTML/CSS — no build step, no framework, no dependencies.
 | `founders.html` | Founders |
 | `404.html` | Not found |
 | `styles.css` | All styles, shared by every page |
-| `site.js` | Progressive enhancement only — scroll reveal and the footer year |
+| `site.js` | Stamps the year in the footer. That is all. |
 
 Set entirely in **Fraunces**, loaded from Google Fonts. Its optical-size axis does the
 work a second typeface would normally do: high contrast at display sizes, sturdier at
@@ -31,8 +31,9 @@ There is no template engine, so the top bar and footer are repeated in each page
 If you change one, change it in all four. The active tab is marked with
 `aria-current="page"`, which is what draws the underline.
 
-Every page renders fully without JavaScript; `site.js` only adds the reveal
-animation, and only when the viewer has not asked for reduced motion.
+There are no scroll animations and no entrance effects. Content is in the page
+markup and renders immediately, with or without JavaScript. The only motion is
+on hover, on links and buttons.
 
 ## Local preview
 
