@@ -26,8 +26,12 @@ A warm nonprofit landing set on **exam-paper cream** with **ink** text and the b
 **gold** (`#e8c547`) as the accent, closing on a warm **chalkboard-black** band for the
 call-to-action and footer — the materials of a maths classroom.
 
-- **Display type:** Fraunces (ties to the `f` logo mark)
-- **Body type:** Hanken Grotesk
+- **Type:** the whole site is set in **Space Grotesk** (the `f` logo and the
+  `fermat` wordmark are separate brand images).
+- **Landing:** a full-screen plain-yellow hero showing only the floating nav pill,
+  the `fermat` wordmark and a Volunteer button; everything else appears on scroll.
+- **Header:** a floating frosted pill that expands into a preview panel on hover
+  (see `header.js`).
 - **Signature element:** the olympiad *pathway* on the home page — Foundations →
   NMTC → IOQM → RMO — a genuinely sequential stepped timeline.
 
