@@ -23,20 +23,23 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/" aria-label="Project Fermat — home">
-        <img src="/logo-256.png" alt="" width="40" height="40" />
-        <span class="brand-name">Project Fermat</span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="/#what-we-do">What we do</a>
-        <a href="/#pathway">The pathway</a>
-        <a href="/#scholars">Our scholars</a>
-        <a href="/founders">Founders</a>
-        <a href="/mission">Mission</a>
+  <header class="site-header" id="siteHeader">
+    <div class="hb">
+      <div class="hb-top">
+        <a class="brand" href="/" aria-label="Project Fermat — home">
+          <img src="/logo-256.png" alt="" width="34" height="34" />
+        </a>
+        <span class="hb-title">Project Fermat</span>
+        <a class="btn btn-primary hb-cta" href="/#get-involved">Volunteer <span class="btn-arrow">↗</span></a>
+      </div>
+      <nav class="hb-nav" aria-label="Primary">
+        <a href="/#what-we-do" data-panel="what-we-do">What we do</a>
+        <a href="/#pathway" data-panel="pathway">The pathway</a>
+        <a href="/#scholars" data-panel="scholars">Our scholars</a>
+        <a href="/founders" data-panel="founders">Founders</a>
+        <a href="/mission" data-panel="mission">Mission</a>
       </nav>
-      <a class="btn btn-primary header-cta" href="/#get-involved">Volunteer</a>
+      <div class="hb-drawer" id="hbDrawer" aria-hidden="true"></div>
     </div>
   </header>
 
@@ -142,5 +145,6 @@
     </div>
   </footer>
 
+  <script src="/header.js" defer></script>
 </body>
 </html>
