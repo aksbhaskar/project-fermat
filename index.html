@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="UaWKQ_2YE_zB7Ungl65Sso5gN0niuzs3KHM9FBe69UU" />
-  <title>Project Fermat</title>
-  <meta name="description" content="A small volunteer initiative helping middle school students build a foundation in olympiad mathematics." />
+  <title>Project Fermat — Olympiad mathematics for every student</title>
+  <meta name="description" content="Project Fermat is a volunteer-run initiative pairing middle-school students in underserved schools across Delhi NCR with scholars who teach olympiad mathematics." />
   <meta property="og:title" content="Project Fermat" />
-  <meta property="og:description" content="A small volunteer initiative helping middle school students build a foundation in olympiad mathematics." />
+  <meta property="og:description" content="A volunteer initiative teaching olympiad mathematics to middle-school students in underserved schools across Delhi NCR." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0a0a0f" />
-  <link rel="canonical" href="https://projectfermat.vercel.app/" />
   <meta property="og:url" content="https://projectfermat.vercel.app/" />
   <meta property="og:image" content="https://projectfermat.vercel.app/icon-512.png" />
+  <meta name="theme-color" content="#f6f1e6" />
+  <link rel="canonical" href="https://projectfermat.vercel.app/" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -22,6 +22,7 @@
     "logo": "https://projectfermat.vercel.app/icon-512.png",
     "description": "A volunteer initiative helping middle school students build a foundation in olympiad mathematics.",
     "email": "theprojectfermat@gmail.com",
+    "areaServed": "Delhi NCR, India",
     "founder": [
       { "@type": "Person", "name": "Akshat Bhaskar", "url": "https://akshatb.com" },
       { "@type": "Person", "name": "Ishaan Harish", "url": "https://ishaanharish.me" }
@@ -34,60 +35,246 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <a class="brand" href="/" aria-label="Project Fermat - home">
-    <img src="/logo-256.png" alt="Project Fermat" width="52" height="52" />
-  </a>
-
-    <nav class="nav" aria-label="Primary">
-    <a href="/" aria-current="page">Home</a>
-    <a href="/mission">Mission</a>
-    <a href="/founders">Founders</a>
-  </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Project Fermat — home">
+        <img src="/logo-256.png" alt="" width="40" height="40" />
+        <span class="brand-name">Project Fermat</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/#what-we-do">What we do</a>
+        <a href="/#pathway">The pathway</a>
+        <a href="/#scholars">Our scholars</a>
+        <a href="/founders">Founders</a>
+        <a href="/mission">Mission</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="/#get-involved">Volunteer</a>
+    </div>
+  </header>
 
   <main>
-    <p class="badge">A volunteer initiative</p>
-    <img class="wordmark" src="/wordmark.png" width="2783" height="739"
-         alt="fermat" decoding="async" />
-    <h1>Project Fermat</h1>
-    <p class="about">
-      A small volunteer initiative helping middle school students (Classes 6&ndash;8)
-      in underserved schools across Delhi NCR build a foundation in olympiad
-      mathematics &mdash; from SOF IMO and NMTC toward IOQM and RMO. Less about solving
-      a particular problem, more about learning how to look at one.
-    </p>
 
-    <div class="block" id="volunteer">
-      <p class="block-title">Volunteer as a tutor</p>
-      <p class="note">
-        We're looking for undergraduates, senior school students, and teachers who
-        are genuinely good at mathematics and want to teach it &mdash; people who'd
-        rather spend a Saturday on a hard problem than almost anything else. No
-        formal teaching experience needed. Reach out with a short introduction and
-        your mathematical background:
-      </p>
-      <p class="emails">
-        <a href="mailto:theprojectfermat@gmail.com">theprojectfermat@gmail.com</a>
-      </p>
-    </div>
+    <!-- hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow reveal d1">Volunteer-run &middot; Delhi NCR</p>
+          <h1 class="reveal d2">Olympiad mathematics for the students usually <em>left out</em>.</h1>
+          <p class="sub reveal d3">
+            Project Fermat pairs middle-schoolers in underserved schools with
+            volunteer scholars who love the subject &mdash; and know how to teach it.
+          </p>
+          <div class="hero-cta reveal d3">
+            <a class="btn btn-primary" href="/#get-involved">Volunteer as a tutor <span class="btn-arrow">&rarr;</span></a>
+            <a class="btn btn-ghost" href="/mission">Read our mission</a>
+          </div>
+          <p class="hero-trust reveal d4">
+            Taught by scholars from <strong>NTU, BITS Pilani, Ashoka</strong>, the
+            <strong>Vasant Valley School</strong> math community, ITYM international
+            medalists, INMO qualifiers and AMC awardees.
+          </p>
+        </div>
+        <div class="hero-art reveal d3" aria-hidden="true">
+          <span class="art-eq eq-a">x&#8319; + y&#8319; = z&#8319;</span>
+          <span class="art-eq eq-b">a&sup2; + b&sup2; = c&sup2;</span>
+          <img class="mark" src="/wordmark-ink.png" alt="" />
+          <p class="art-caption">Est. 2026 &middot; Delhi NCR</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- mission statement -->
+    <section class="section statement">
+      <div class="wrap">
+        <p class="big reveal">
+          Whether a child finds out they&rsquo;re good at mathematics still depends too
+          much on the school they land in. <span class="hl">The ability is spread
+          evenly. The teaching isn&rsquo;t.</span>
+        </p>
+        <p class="after reveal d1">We exist to close that gap, one student at a time.</p>
+      </div>
+    </section>
+
+    <!-- what we do -->
+    <section class="section section-alt" id="what-we-do">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">What we do</p>
+          <h2>A real mathematical education, not exam drilling.</h2>
+          <p class="lead">
+            We teach the way we wish we&rsquo;d been taught in sixth grade &mdash; starting
+            from the basics and building the habit of thinking about problems.
+          </p>
+        </div>
+        <div class="offers">
+          <div class="offer">
+            <p class="n">Foundations</p>
+            <h3>Secure in the basics</h3>
+            <p>Olympiad work rewards students who own the fundamentals. We start there, patiently, before anything else.</p>
+          </div>
+          <div class="offer">
+            <p class="n">Method</p>
+            <h3>Problem-solving, not procedures</h3>
+            <p>Sessions built around sitting with a hard problem &mdash; and being wrong for a while without giving up.</p>
+          </div>
+          <div class="offer">
+            <p class="n">Pathway</p>
+            <h3>The route they&rsquo;ll actually travel</h3>
+            <p>We follow the real competition ladder, so students meet it years before most of their peers hear it exists.</p>
+          </div>
+          <div class="offer">
+            <p class="n">Access</p>
+            <h3>Open resources</h3>
+            <p>Notes and problem sets released freely, so the work reaches students we can&rsquo;t yet teach in person.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- the pathway (signature) -->
+    <section class="section" id="pathway">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">The pathway</p>
+          <h2>From the basics to the national olympiads.</h2>
+          <p class="lead">
+            Most students never hear this pathway exists until Class 10 or 11 &mdash; by
+            which point they&rsquo;ve lost years they can&rsquo;t get back. We start it early.
+          </p>
+        </div>
+        <div class="pathway">
+          <div class="step">
+            <span class="dot"></span><span class="rail"></span>
+            <p class="stage">Classes 6&ndash;8</p>
+            <h3>Foundations</h3>
+            <p>Security in the basics and the habit of problem-solving.</p>
+          </div>
+          <div class="step">
+            <span class="dot"></span><span class="rail"></span>
+            <p class="stage">First contests</p>
+            <h3>SOF IMO &middot; NMTC</h3>
+            <p>An early, encouraging taste of olympiad-style problems.</p>
+          </div>
+          <div class="step">
+            <span class="dot"></span><span class="rail"></span>
+            <p class="stage">The gateway</p>
+            <h3>IOQM</h3>
+            <p>The national qualifier, opening up from Class 8 onward.</p>
+          </div>
+          <div class="step">
+            <span class="dot"></span><span class="rail"></span>
+            <p class="stage">The reach</p>
+            <h3>RMO &amp; beyond</h3>
+            <p>Regional Math Olympiad and the road toward INMO.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our scholars -->
+    <section class="section section-alt" id="scholars">
+      <div class="wrap">
+        <div class="scholars-grid">
+          <div>
+            <p class="eyebrow">Our scholars</p>
+            <h2 style="font-size: clamp(1.9rem, 4.5vw, 3rem); margin-top: 16px;">Taught by people who&rsquo;ve done it.</h2>
+            <p class="lead" style="margin-top:18px;">
+              Our volunteers are undergraduates, senior students and competitors who are
+              genuinely good at mathematics &mdash; and care about explaining it well.
+            </p>
+          </div>
+          <div class="chips">
+            <div class="chip"><strong>NTU</strong><span>Undergraduate scholars</span></div>
+            <div class="chip"><strong>BITS Pilani</strong><span>Undergraduate scholars</span></div>
+            <div class="chip"><strong>Ashoka University</strong><span>Undergraduate scholars</span></div>
+            <div class="chip"><strong>Vasant Valley School</strong><span>Mathematics community</span></div>
+            <div class="chip"><strong>ITYM</strong><span>International medalists</span></div>
+            <div class="chip"><strong>INMO</strong><span>Qualifiers &amp; medallists</span></div>
+            <div class="chip"><strong>AMC</strong><span>Merit awardees</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- get involved -->
+    <section class="section cta-band on-board" id="get-involved">
+      <div class="wrap">
+        <div class="cta-inner">
+          <div>
+            <p class="eyebrow">Get involved</p>
+            <h2>Teach the students who need you most.</h2>
+            <p>
+              Volunteering is unpaid and flexible. If you&rsquo;re strong at mathematics
+              and want to help a twelve-year-old fall for it, we&rsquo;d love to hear from
+              you &mdash; no formal teaching experience needed.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="mailto:theprojectfermat@gmail.com?subject=Volunteering%20with%20Project%20Fermat">Email us to volunteer <span class="btn-arrow">&rarr;</span></a>
+            <a class="cta-mail" href="mailto:theprojectfermat@gmail.com">theprojectfermat@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p class="initiative">
-      An initiative by
-      <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
-      and
-      <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>
-    </p>
-    <p class="legal">
-      <a href="/privacy">Privacy Policy</a>
-      <span class="sep">&middot;</span>
-      <a href="/terms">Terms &amp; Conditions</a>
-    </p>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="f-brand">
+          <a class="f-logo" href="/">
+            <img src="/logo-256.png" alt="" width="44" height="44" />
+            <span>Project Fermat</span>
+          </a>
+          <p class="tag">A volunteer-run mathematics education initiative working with students in underserved schools across Delhi NCR.</p>
+          <p class="copy">
+            An initiative by
+            <a href="https://akshatb.com" target="_blank" rel="noopener">Akshat Bhaskar</a>
+            and
+            <a href="https://ishaanharish.me" target="_blank" rel="noopener">Ishaan Harish</a>.
+            <br />&copy; 2026 Project Fermat.
+          </p>
+        </div>
+        <div class="f-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="/#what-we-do">What we do</a></li>
+            <li><a href="/#pathway">The pathway</a></li>
+            <li><a href="/#scholars">Our scholars</a></li>
+            <li><a href="/mission">Mission</a></li>
+            <li><a href="/founders">Founders</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Get involved</h4>
+          <ul>
+            <li><a href="/#get-involved">Volunteer</a></li>
+            <li><a href="mailto:theprojectfermat@gmail.com">theprojectfermat@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="f-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/terms">Terms &amp; Conditions</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Project Fermat &middot; Delhi NCR, India</span>
+        <span class="socials">
+          <a href="mailto:theprojectfermat@gmail.com" aria-label="Email Project Fermat">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </span>
+      </div>
+    </div>
   </footer>
 
 </body>

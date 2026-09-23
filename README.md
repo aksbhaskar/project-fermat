@@ -1,8 +1,10 @@
 # Project Fermat
 
-Site for **Project Fermat** — a volunteer initiative helping middle school students
-(Classes 6–8) build a foundation in olympiad mathematics, from SOF IMO and NMTC
-toward IOQM and RMO.
+Site for **Project Fermat** — a volunteer initiative helping middle-school students
+(Classes 6–8) in underserved schools across Delhi NCR build a foundation in olympiad
+mathematics, from SOF IMO and NMTC toward IOQM and RMO.
+
+Live at [projectfermat.vercel.app](https://projectfermat.vercel.app).
 
 ## Stack
 
@@ -10,36 +12,36 @@ Static HTML/CSS — no build step, no framework, no dependencies, no JavaScript.
 
 | File | |
 |---|---|
-| `index.html` | Home |
+| `index.html` | Home — a single scrolling landing page |
 | `mission.html` | Mission |
 | `founders.html` | Founders |
 | `privacy.html` · `terms.html` | Legal |
 | `404.html` | Not found |
 | `styles.css` | All styles, shared by every page |
+| `robots.txt` · `sitemap.xml` | SEO |
 
 ## The look
 
-Everything is set in **Fraunces at weight 400** — one family, one weight. The
-optical-size axis handles the difference between a heading and a paragraph, so
-nothing needs to get bolder to read as a heading.
+A warm nonprofit landing set on **exam-paper cream** with **ink** text and the brand
+**gold** (`#e8c547`) as the accent, closing on a warm **chalkboard-black** band for the
+call-to-action and footer — the materials of a maths classroom.
 
-Every page is centred on a single 40rem measure and built from three devices:
+- **Display type:** Fraunces (ties to the `f` logo mark)
+- **Body type:** Hanken Grotesk
+- **Signature element:** the olympiad *pathway* on the home page — Foundations →
+  SOF IMO / NMTC → IOQM → RMO — a genuinely sequential stepped timeline.
 
-- a small letterspaced accent line above the title
-- muted body copy at a comfortable line-height
-- hairline rules to separate blocks
-
-No boxes, no cards, no panels, no fills, no italics, no animation. The accent gold
-appears only on the line above the title, on the founder labels, and on hover.
-
-Legal pages are the one exception to centring: their body copy is left-aligned,
-because centred text is hard to read at that length.
+All colors are CSS variables on `:root` in `styles.css`. The home page is built from
+sections (`.hero`, `.statement`, `.offers`, `.pathway`, `.scholars-grid`, `.cta-band`);
+inner pages use `.page-head` + `.prose`.
 
 ## Editing
 
-There is no template engine, so the nav and footer are repeated in each page. If
-you change one, change it in all six. The current page is marked with
-`aria-current="page"`, which is what underlines it.
+There is no template engine, so the header (`.site-header`) and footer (`.site-footer`)
+are repeated in every page. **If you change one, change it in all of them.** The current
+page is marked with `aria-current="page"` on its nav link.
+
+Header/footer links to home sections use `/#section-id` so they work from any page.
 
 ## Local preview
 
