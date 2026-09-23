@@ -2,7 +2,7 @@
 
 Site for **Project Fermat** — a volunteer initiative helping middle-school students
 (Classes 6–8) in underserved schools across Delhi NCR build a foundation in olympiad
-mathematics, from SOF IMO and NMTC toward IOQM and RMO.
+mathematics, from NMTC toward IOQM and RMO.
 
 Live at [projectfermat.vercel.app](https://projectfermat.vercel.app).
 
@@ -29,7 +29,7 @@ call-to-action and footer — the materials of a maths classroom.
 - **Display type:** Fraunces (ties to the `f` logo mark)
 - **Body type:** Hanken Grotesk
 - **Signature element:** the olympiad *pathway* on the home page — Foundations →
-  SOF IMO / NMTC → IOQM → RMO — a genuinely sequential stepped timeline.
+  NMTC → IOQM → RMO — a genuinely sequential stepped timeline.
 
 All colors are CSS variables on `:root` in `styles.css`. The home page is built from
 sections (`.hero`, `.statement`, `.offers`, `.pathway`, `.scholars-grid`, `.cta-band`);
