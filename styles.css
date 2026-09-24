@@ -137,9 +137,8 @@ main {
   .side-nav a { font-size: 0.98rem; }
   .side-nav a[aria-current="page"] { width: fit-content; }
   .side-btn { padding: 8px 16px; font-size: 0.88rem; }
-  .side-foot { margin-top: 0; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px 18px; width: 100%; }
-  .side-links { flex-direction: row; flex-wrap: wrap; gap: 8px 18px; }
-  .side-copy { width: 100%; order: 9; }
+  /* hide the email + copyright from the top bar on phones (kept on desktop) */
+  .side-foot { display: none; }
   .content { min-height: 0; padding: 0 20px; }
   main { padding: 34px 0 56px; }
 }
