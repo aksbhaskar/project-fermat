@@ -23,17 +23,12 @@ Everything is set in **Fraunces at weight 400** — one family, one weight. The
 optical-size axis handles the difference between a heading and a paragraph, so
 nothing needs to get bolder to read as a heading.
 
-Every page is centred on a single 40rem measure and built from three devices:
-
-- a small letterspaced accent line above the title
-- muted body copy at a comfortable line-height
-- hairline rules to separate blocks
-
-No boxes, no cards, no panels, no fills, no italics, no animation. The accent gold
-appears only on the line above the title, on the founder labels, and on hover.
-
-Legal pages are the one exception to centring: their body copy is left-aligned,
-because centred text is hard to read at that length.
+The layout is a fixed **left sidebar** (nav, a Volunteer button, contact links and
+the copyright) beside a left-aligned **content column**. The content opens with a
+brand lockup (the logo mark + "Project Fermat") and is built from muted body copy at
+a comfortable line-height with hairline rules between blocks. No boxes, no cards, no
+panels, no fills. The accent gold appears only on the active nav underline, the
+founder labels, and on hover. On narrow screens the sidebar collapses to a top bar.
 
 ## Editing
 
