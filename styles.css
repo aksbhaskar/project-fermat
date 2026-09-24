@@ -85,10 +85,11 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 20px;
   padding: 72px 0 64px;
+  text-align: left;
 }
 
 .badge {
@@ -103,7 +104,7 @@ main {
   display: block;
   width: clamp(200px, 42vw, 320px);
   height: auto;
-  margin: 2px auto -2px;
+  margin: 2px 0 -2px;
 }
 
 h1 {
@@ -149,7 +150,7 @@ main a:not(.plain):hover { border-color: var(--accent); }
 .emails {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 6px 18px;
   font-size: clamp(0.85rem, 2.2vw, 0.98rem);
   color: var(--muted);
