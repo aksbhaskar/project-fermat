@@ -391,3 +391,11 @@ main.wide { max-width: 54rem; }
 }
 
 :focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+
+/* --- resources list ---------------------------------------------- */
+
+.res { margin-top: 22px; }
+.res h3 { font-weight: 400; font-size: clamp(0.98rem, 2.4vw, 1.08rem); }
+.res h3 a { color: var(--ink); }
+.res p { margin-top: 6px; }
+.doc .res .meta { font-size: 0.82rem; opacity: 0.8; margin-top: 4px; }
