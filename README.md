@@ -69,7 +69,6 @@ A quiet, dark, editorial layout.
   | `--ink`     | `#f4f1ea` | Body text                 |
   | `--muted`   | `#8a8778` | Secondary text            |
   | `--accent`  | `#e8c547` | Links, buttons, highlights |
-  | `--measure` | `40rem`   | Max width of the text column |
 
 - **Layout:** a fixed **left sidebar** (navigation, a Volunteer button, contact and
   copyright) sits beside a left-aligned **content column** that opens with the brand
