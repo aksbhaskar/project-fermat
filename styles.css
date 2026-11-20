@@ -153,7 +153,6 @@ h1 {
   font-size: clamp(0.95rem, 2.4vw, 1.1rem);
   line-height: 1.65;
 }
-.about + .about { margin-top: -4px; }
 
 /* A rule-separated block, the same device the first page used. */
 .block {
