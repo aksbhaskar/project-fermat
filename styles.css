@@ -11,8 +11,6 @@
   --accent:  #e8c547;
   --line:    rgba(244, 241, 234, 0.12);
   --rule:    rgba(244, 241, 234, 0.25);
-
-  --measure: 40rem;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
