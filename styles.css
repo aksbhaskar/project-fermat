@@ -143,21 +143,6 @@ main {
   main { padding: 34px 0 56px; }
 }
 
-.badge {
-  font-size: 0.72rem;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-/* the 'fermat' wordmark, sitting above the title on the home hero */
-.wordmark {
-  display: block;
-  width: clamp(200px, 42vw, 320px);
-  height: auto;
-  margin: 2px 0 -2px;
-}
-
 h1 {
   font-weight: 400;
   font-size: clamp(2rem, 6vw, 3.5rem);
