@@ -15,7 +15,7 @@ This repository holds the source for the website.
 - **Static HTML + CSS.** No build step, no framework, no dependencies.
 - **No client-side JavaScript.** The only `<script>` is the JSON-LD structured data
   on the home page.
-- **One stylesheet** (`styles.css`) shared by every page.
+- **One stylesheet** (`styles.<hash>.css`) shared by every page.
 - **Hosted on Vercel.** Every push to `main` deploys automatically.
 
 ## Quick start
@@ -29,7 +29,7 @@ npx serve .        # or: python3 -m http.server
 Then open the URL it prints (usually <http://localhost:3000>).
 
 > Use a local server rather than opening the files directly. Pages use root-absolute
-> paths (`/styles.css`, `/logos/…`, `/mission`), and these break under `file://`.
+> paths (`/styles.<hash>.css`, `/logos/…`, `/mission`), and these break under `file://`.
 > `npx serve` also handles clean URLs, so `/mission` serves `mission.html`, the same
 > as on Vercel.
 
@@ -42,7 +42,7 @@ founders.html         Founders
 privacy.html          Privacy Policy
 terms.html            Terms & Conditions
 404.html              Not found (served by Vercel for unknown routes)
-styles.css            All styles, shared by every page
+styles.<hash>.css     All styles, shared by every page
 robots.txt            Crawling rules
 sitemap.xml           Sitemap for search engines
 vercel.json           Clean URLs (/mission, not /mission.html), no trailing slash
@@ -61,7 +61,7 @@ A quiet, dark, editorial layout.
   at weight 400, loaded from Google Fonts. One family and one weight; the
   optical-size axis separates headings from body text.
 - **Colour:** a warm **gold** is the only accent. All colours are CSS variables at the
-  top of `styles.css`:
+  top of the stylesheet:
 
   | Token       | Value     | Use                       |
   | ----------- | --------- | ------------------------- |
@@ -96,8 +96,19 @@ the `.html` extension.
 
 ### Adding an affiliation logo
 
-Put the file in `logos/` (PNG with a transparent background, or SVG). Then add an
-`<img>` with descriptive `alt` text to the logo wall in `index.html`.
+Use SVG when available, otherwise export a WebP that fits within 400 × 144 pixels
+without upscaling and preserves transparency. Put it in `logos/`. Add an
+`<img>` with its intrinsic `width` and `height`, descriptive `alt` text, and
+`loading="lazy"` if it is below the first row on desktop.
+
+### Editing the stylesheet or images
+
+Vercel caches versioned styles, logos, and portraits for a year. After changing
+one, use the first 12 characters of its SHA-256 (from `shasum -a 256 FILE`) as
+the filename's middle segment: `styles.<hash>.css`,
+`logos/<name>.<hash>.webp` (or `.svg`), or `photos/<name>.<hash>.webp`.
+Update every HTML reference to the old filename. Founder portraits are 168 × 168
+pixel WebPs displayed at 84 × 84 pixels.
 
 ### Before you push
 
